@@ -1,5 +1,6 @@
 package com.stalkerfish.eastereggs
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -36,7 +37,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         hellGateButton?.setOnClickListener {
-            TODO("Pending to create the landing activity")
+            val intent = Intent(this, HellActivity::class.java)
+            startActivity(intent);
+            finish()
         }
 
         killButton?.setOnClickListener {
@@ -44,6 +47,12 @@ class MainActivity : AppCompatActivity() {
                 brewCounter--
                 counter?.text = brewCounter.toString()
                 killCounter++
+
+                when (killCounter) {
+                    8 -> { introText?.text = getString(R.string.devilWarning) }
+                    9 -> { introText?.text = getString(R.string.secondDevilWarning) }
+                    10 -> { hellGateButton?.isVisible = true }
+                }
 
             }else
                 Toast.makeText(this, "There is no one to kill, asshole", Toast.LENGTH_SHORT).show()
