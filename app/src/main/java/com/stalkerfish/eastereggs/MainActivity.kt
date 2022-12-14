@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isVisible
 
 class MainActivity : AppCompatActivity() {
     private var introText: TextView? = null
@@ -12,7 +13,8 @@ class MainActivity : AppCompatActivity() {
     private var counter: TextView? = null
     private var killButton: Button? = null
 
-    var brewCounter: Int = 0
+    private var brewCounter: Int = 0
+    private var killCounter: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,14 +28,16 @@ class MainActivity : AppCompatActivity() {
         counter?.text = "0"
 
         brewButton?.setOnClickListener{
-                brewCounter++
-                counter?.text = brewCounter.toString()
+            brewCounter++
+            killButton?.isVisible = true
+            counter?.text = brewCounter.toString()
         }
 
         killButton?.setOnClickListener {
             if (brewCounter > 0) {
                 brewCounter--
                 counter?.text = brewCounter.toString()
+                killCounter++
 
             }else
                 Toast.makeText(this, "There is no one to kill, asshole", Toast.LENGTH_SHORT).show()
