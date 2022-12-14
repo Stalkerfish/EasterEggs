@@ -37,7 +37,7 @@
     <Button
         android:id="@+id/brew_button"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:layout_marginTop="24dp"
         android:text="@string/brew_a_person"
         android:textColor="@color/English_Violet"
@@ -55,6 +55,18 @@
         android:textSize="78sp"
         android:fontFamily="casual"
         android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/kill_button"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/Ruber"
+        android:text="@string/kill_a_person"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
         />
 
 </LinearLayout>
