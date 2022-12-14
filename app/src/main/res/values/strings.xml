@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Easter Eggs</string>
     <string name="easter_eggs">Easter Eggs</string>
-    <string name="intro">Every click is one more person is the world</string>
+    <string name="intro">Every click is one more person in the world</string>
     <string name="brew_a_person">Brew a person</string>
     <string name="people_count">0</string>
     <string name="kill_a_person">Kill a person</string>
