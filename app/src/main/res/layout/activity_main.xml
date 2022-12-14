@@ -13,6 +13,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
         android:text="@string/easter_eggs"
         android:fontFamily="serif-monospace"
         android:textStyle="bold"
@@ -45,10 +46,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26sp"
+        android:layout_marginTop="30sp"
         android:text="@string/people_count"
         android:textColor="@color/Ash_Grey"
-        android:textSize="70sp"
+        android:textSize="78sp"
         android:fontFamily="casual"
         android:textStyle="bold"
         />
