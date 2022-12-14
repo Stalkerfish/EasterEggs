@@ -5,4 +5,5 @@
     <string name="brew_a_person">Brew a person</string>
     <string name="people_count">0</string>
     <string name="kill_a_person">Kill a person</string>
+    <string name="hellGateIntro">You pissed someone off...</string>
 </resources>

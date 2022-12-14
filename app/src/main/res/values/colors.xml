@@ -6,10 +6,14 @@
     <color name="Gunmetal">#333745</color>
     <color name="English_Violet">#4A3749</color>
     <color name="Ruber">#D6476F</color>
+    <color name="Sizzling_Red">#EA4E5C</color>
     <color name="Orange_Red_Crayola">#fe5f55</color>
     <color name="Aero_Blue">#c7efcf</color>
+    <color name="Cambridge_Blue">#C6DBC3</color>
     <color name="Ash_Grey">#C5C6B7</color>
     <color name="Beige">#eef5db</color>
+
+
 
     /// default colors
     <color name="purple_200">#FFBB86FC</color>

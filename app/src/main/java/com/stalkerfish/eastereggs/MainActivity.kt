@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     private var brewButton: Button? = null
     private var counter: TextView? = null
     private var killButton: Button? = null
+    private var hellGateButton: Button? = null
 
     private var brewCounter: Int = 0
     private var killCounter: Int = 0
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         brewButton = findViewById(R.id.brew_button)
         counter = findViewById(R.id.counter)
         killButton = findViewById(R.id.kill_button)
+        hellGateButton = findViewById(R.id.hellGateBtn)
 
         counter?.text = "0"
 
@@ -31,6 +33,10 @@ class MainActivity : AppCompatActivity() {
             brewCounter++
             killButton?.isVisible = true
             counter?.text = brewCounter.toString()
+        }
+
+        hellGateButton?.setOnClickListener {
+            TODO("Pending to create the landing activity")
         }
 
         killButton?.setOnClickListener {
