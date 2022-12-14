@@ -5,5 +5,8 @@
     <string name="brew_a_person">Brew a person</string>
     <string name="people_count">0</string>
     <string name="kill_a_person">Kill a person</string>
-    <string name="hellGateIntro">You pissed someone off...</string>
+    <string name="hellGateIntro">You pissed someone off…</string>
+    <string name="devilWarning">Go on, you think your attitudes do not have consequences, son of a bitch</string>
+    <string name="secondDevilWarning">You\'re gonna have what you deserve</string>
+    <string name="hellIntro">Welcome to hell, bastard!</string>
 </resources>
