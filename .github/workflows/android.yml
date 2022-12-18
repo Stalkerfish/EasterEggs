@@ -10,6 +10,7 @@ on:
     
 jobs:
 
+<<<<<<< HEAD
 #  lint:
 #    runs-on: ubuntu-latest
 #    steps:
@@ -61,6 +62,64 @@ jobs:
 #              name: instrumentation_test_report
 #              path: app/build/reports/androidTests/connected/
 #
+=======
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      
+      - name: Running Lint
+        run: ./gradlew lintDebug
+          
+      - name: Upload Lint Test Report
+        uses: actions/upload-artifact@v2
+        with:
+         name: lint.html
+         path: app/build/reports/lint-results-debug.html
+              
+  unit-test:
+   needs: [lint]
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout the code
+       uses: actions/checkout@v2
+      
+     - name: Running unit tests
+       run: ./gradlew test --stacktrace
+          
+     - name: Upload Unit Tests Report
+       uses: actions/upload-artifact@v2
+       with:
+             name: unit-test-report
+             path: app/build/reports//test/testDebugUnitTest/
+
+  instrumentation-test:
+    needs: [unit-test]
+    runs-on: macos-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+        
+      - name: Run espresso tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          arch: 'x86_64'
+          api-level: 30
+          script: ./gradlew connectedCheck --stacktrace
+      
+      - name: Upload Instrumentation Test report
+        uses: actions/upload-artifact@v2
+        with:
+              name: instrumentation_test_report
+              path: app/build/reports/androidTests/connected/
+              
+>>>>>>> 116c6ff3d331e3f14806145161e64241e9dac212
   static-code-analysis:
       # needs: [instrumentation-test]
       runs-on: ubuntu-latest
