@@ -51,8 +51,8 @@ jobs:
       - name: Run espresso tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
+          arch: 'x86_64'
           api-level: 32
-          emulator-port: 5555
           script: ./gradlew connectedCheck --stacktrace
       
       - name: Upload Instrumentation Test report
