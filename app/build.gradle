@@ -1,9 +1,10 @@
-apply plugin: "org.sonarqube"
 
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
+
+apply plugin: "org.sonarqube"
 
 android {
     namespace 'com.stalkerfish.eastereggs'
