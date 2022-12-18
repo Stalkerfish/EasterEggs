@@ -5,6 +5,9 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.7.20' apply false
 }
 
-dependencies {
-    classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7.1"
+buildscript {
+    dependencies {
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7.1"
+    }
+
 }
