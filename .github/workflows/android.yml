@@ -74,14 +74,10 @@ jobs:
 
       - name: create AVD and generate snapshot for caching
         if: steps.avd-cache.outputs.cache-hit != 'true'
-
-        uses: actions/setup-java@v1
-        with:
-          java-version: 11
-
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
+          arch: 'x86_64'
           force-avd-creation: false
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: false
@@ -91,6 +87,7 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
+          arch: 'x86_64'
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
