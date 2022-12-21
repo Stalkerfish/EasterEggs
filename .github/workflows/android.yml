@@ -3,62 +3,70 @@ name: Android CI
 on:
   push:
     branches: [ main ]
-  
+
   pull_request:
     branches: [ main ]
 
   workflow_dispatch:
-    
+
 jobs:
 
-#  lint:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Checkout the code
-#        uses: actions/checkout@v2
-#
-#      - name: Running Lint
-#        run: ./gradlew lintDebug
-#
-#      - name: Upload Lint Test Report
-#        uses: actions/upload-artifact@v2
-#        with:
-#         name: lint.html
-#         path: app/build/reports/lint-results-debug.html
-#
-#  unit-test:
-#   needs: [lint]
-#   runs-on: ubuntu-latest
-#   steps:
-#     - name: Checkout the code
-#       uses: actions/checkout@v2
-#
-#     - name: Running unit tests
-#       run: ./gradlew test --stacktrace
-#
-#     - name: Upload Unit Tests Report
-#       uses: actions/upload-artifact@v2
-#       with:
-#             name: unit-test-report
-#             path: app/build/reports//test/testDebugUnitTest/
-#
-#  instrumentation-test:
-#    needs: [unit-test]
-#    runs-on: macos-latest
-#    steps:
-#      - name: Checkout the code
-#        uses: actions/checkout@v2
-#
-#      - name: Run espresso tests
-#        uses: reactivecircus/android-emulator-runner@v2
-#        with:
-#          api-level: 32
-#          emulator-port: 5555
-#          script: ./gradlew connectedCheck --stacktrace
-#
-#      - name: Upload Instrumentation Test report
-#        uses: actions/upload-artifact@v2
-#        with:
-#              name: instrumentation_test_report
-#              path: app/build/reports/androidTests/connected/
-#
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Setting up Gradle
+        uses: gradle/gradle-build-action@v2.3.3
+
+      - name: Running Lint
+        run: ./gradlew lintDebug
+
+      - name: Upload Lint Test Report
+        uses: actions/upload-artifact@v2
+        with:
+         name: lint.html
+         path: app/build/reports/lint-results-debug.html
+
+  unit-test:
+   needs: [lint]
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout the code
+       uses: actions/checkout@v2
+
+     - name: Setting up Gradle
+       uses: gradle/gradle-build-action@v2.3.3
+
+     - name: Running unit tests
+       run: ./gradlew test --stacktrace
+
+     - name: Upload Unit Tests Report
+       uses: actions/upload-artifact@v2
+       with:
+             name: unit-test-report
+             path: app/build/reports//test/testDebugUnitTest/
+
+  instrumentation-test:
+    needs: [unit-test]
+    runs-on: macos-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Setting up Gradle
+         uses: gradle/gradle-build-action@v2.3.3
+
+      - name: Run espresso tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 32
+          emulator-port: 5555
+          script: ./gradlew connectedCheck --stacktrace
+
+      - name: Upload Instrumentation Test report
+        uses: actions/upload-artifact@v2
+        with:
+              name: instrumentation_test_report
+              path: app/build/reports/androidTests/connected/
