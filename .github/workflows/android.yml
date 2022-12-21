@@ -46,7 +46,7 @@ jobs:
        uses: actions/upload-artifact@v2
        with:
              name: unit-test-report
-             path: app/build/reports//test/testDebugUnitTest/
+             path: app/build/reports/test/testDebugUnitTest/
 
   instrumentation-test:
     needs: [unit-test]
@@ -62,7 +62,6 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
-          emulator-port: 5555
           script: ./gradlew connectedCheck --stacktrace
 
       - name: Upload Instrumentation Test report
