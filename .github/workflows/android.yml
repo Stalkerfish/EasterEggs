@@ -74,6 +74,11 @@ jobs:
 
       - name: create AVD and generate snapshot for caching
         if: steps.avd-cache.outputs.cache-hit != 'true'
+
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
