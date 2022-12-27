@@ -11,7 +11,25 @@ on:
 
 jobs:
 
+  skip-workflow:
+    runs-on: ubuntu-latest
+    
+    outputs: # job outputs
+      skip: ${{ steps.skip-workflow.outputs.skip }}
+    
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: skip-workflow
+        id: skip-workflow # id used for referencing step
+        uses: saulmaldonado/skip-workflow@v1
+        with:
+          phrase: '[skip-build]'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
   lint:
+    needs: skip-workflow
+    if: ${{ !needs.skip-workflow.outputs.skip }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code
@@ -30,7 +48,8 @@ jobs:
           path: app/build/reports/lint-results-debug.html
 
   unit-test:
-    needs: [lint]
+    needs: [skip-workflow, lint]
+    if: ${{ !needs.skip-workflow.outputs.skip }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code
@@ -49,7 +68,8 @@ jobs:
           path: app/build/reports/tests/testDebugUnitTest/
 
   instrumentation-test:
-    needs: [ unit-test ]
+    needs: [skip-workflow, unit-test ]
+    if: ${{ !needs.skip-workflow.outputs.skip }}
     runs-on: macos-latest
     steps:
       - name: Checkout the code
