@@ -7,9 +7,30 @@ on:
   workflow_dispatch:
 
 jobs:
-  changelog:
-    runs-on: ubuntu-latest
 
+  skip-workflow:
+    runs-on: ubuntu-latest
+    
+    outputs: # job outputs
+      skip: ${{ steps.skip-workflow.outputs.skip }}
+    
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: skip-workflow
+        id: skip-workflow # id used for referencing step
+        uses: saulmaldonado/skip-workflow@v1
+        with:
+          phrase: '[skip-release]'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          
+          
+  changelog:
+  
+    needs: skip-workflow
+    
+    if: ${{ !needs.skip-workflow.outputs.skip }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
