@@ -14,4 +14,29 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <declare-styleable name="SympliTextView">
+        <attr name="fontPath" format="reference"/>
+
+        <!-- Inner shadow settings. -->
+        <attr name="innerShadowColor" format="color"/>
+        <attr name="innerShadowDx" format="dimension"/>
+        <attr name="innerShadowDy" format="dimension"/>
+        <attr name="innerShadowRadius" format="dimension"/>
+
+        <!-- Outer shadow settings. -->
+        <attr name="outerShadowColor" format="color"/>
+        <attr name="outerShadowDx" format="dimension"/>
+        <attr name="outerShadowDy" format="dimension"/>
+        <attr name="outerShadowRadius" format="dimension"/>
+    </declare-styleable>
+
+    <style name="TheRoom_style" parent="android:Widget.TextView">
+        <item name="fontPath">@font/edo</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">96sp</item>
+        <item name="android:textStyle">normal</item>
+
+    </style>
+
 </resources>
