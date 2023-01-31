@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +9,7 @@
     tools:context=".Splash">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily ="@font/arapey_italic"
         android:layout_marginTop="152dp"
@@ -18,41 +17,58 @@
         android:textSize ="14sp"
         android:textStyle="italic"
         android:textColor ="@color/white"
-        android:layout_gravity="center"
+        android:gravity="center"
         android:letterSpacing ="0.05"
         android:text="@string/welcome_to"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginBottom="38dp"
-        android:fontFamily="@font/poppins_light"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:text="@string/e_a_s_t_e_r_e_g_g_s_i_n" />
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/easter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:text="@string/e_a_s_t_e_r">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/eggs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:text="@string/e_g_g_s_i_n">
+
+        </TextView>
+    </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily ="@font/edo"
-        android:textSize ="96sp"
-        android:textStyle ="normal"
-        android:textColor ="@color/white"
-        android:gravity ="center"
-        android:letterSpacing ="0.03"
+        android:fontFamily="@font/edo"
+        android:gravity="center"
+        android:letterSpacing="0.03"
         android:text="@string/the"
-        />
+        android:textColor="@color/white"
+        android:textSize="96sp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:fontFamily ="@font/edo"
         android:textSize ="96sp"
-        android:textStyle ="normal"
         android:textColor ="@color/white"
         android:gravity ="center"
         android:letterSpacing ="0.06"
@@ -60,23 +76,23 @@
         />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily ="@font/arapey_italic"
         android:layout_marginTop="14dp"
         android:textSize ="16sp"
         android:textStyle="italic"
         android:textColor ="@color/white"
-        android:layout_gravity="center"
+        android:gravity="center"
         android:letterSpacing ="0.05"
         android:text="@string/can_you_visit_every_place_possible"
         />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_marginTop="103dp">
 
          <ImageView

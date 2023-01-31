@@ -15,27 +15,27 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <declare-styleable name="SympliTextView">
-        <attr name="fontPath" format="reference"/>
+    <style name="Theme.Hell" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/Beige</item>
+        <item name="colorPrimaryVariant">@color/Gunmetal</item>
+        <item name="colorOnPrimary">@color/English_Violet</item>
+        <item name="android:background">@color/Sizzling_Red</item>
+        <item name="android:fontFamily">@font/devilspeaks</item>
 
-        <!-- Inner shadow settings. -->
-        <attr name="innerShadowColor" format="color"/>
-        <attr name="innerShadowDx" format="dimension"/>
-        <attr name="innerShadowDy" format="dimension"/>
-        <attr name="innerShadowRadius" format="dimension"/>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
 
-        <!-- Outer shadow settings. -->
-        <attr name="outerShadowColor" format="color"/>
-        <attr name="outerShadowDx" format="dimension"/>
-        <attr name="outerShadowDy" format="dimension"/>
-        <attr name="outerShadowRadius" format="dimension"/>
-    </declare-styleable>
-
-    <style name="TheRoom_style" parent="android:Widget.TextView">
-        <item name="fontPath">@font/edo</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">96sp</item>
-        <item name="android:textStyle">normal</item>
+    <style name="Theme.Splash" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
 
     </style>
 

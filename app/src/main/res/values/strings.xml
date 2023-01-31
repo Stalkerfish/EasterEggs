@@ -10,11 +10,12 @@
     <string name="secondDevilWarning">You\'re gonna have what you deserve</string>
     <string name="hellIntro">Welcome to hell, bastard!</string>
     <string name="welcome_to">Welcome to...</string>
-    <string name="e_a_s_t_e_r_e_g_g_s_i_n">E A S T E R E G G S I N</string>
     <string name="the">THE</string>
     <string name="room">ROOM</string>
     <string name="can_you_visit_every_place_possible">Can you visit every place possible?</string>
     <string name="twitter_icon">Twitter icon</string>
     <string name="instagram_icon">Instagram icon</string>
     <string name="github_icon">Github icon</string>
+    <string name="e_a_s_t_e_r">E A S T E R  </string>
+    <string name="e_g_g_s_i_n"> E G G S  I N</string>
 </resources>
