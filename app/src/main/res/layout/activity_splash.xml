@@ -45,11 +45,25 @@
             android:id="@+id/eggs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_marginStart="12dp"
             android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:text="@string/e_g_g_s_i_n"
             android:textColor="@color/white"
-            android:textSize="14sp"
-            android:text="@string/e_g_g_s_i_n">
+            android:textSize="14sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:text="I N"
+            android:textColor="@color/white"
+            android:textSize="14sp">
 
         </TextView>
     </LinearLayout>
@@ -67,13 +81,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily ="@font/edo"
-        android:textSize ="96sp"
-        android:textColor ="@color/white"
-        android:gravity ="center"
-        android:letterSpacing ="0.06"
+        android:fontFamily="@font/edo"
+        android:gravity="center"
+        android:letterSpacing="0.06"
         android:text="@string/room"
-        />
+        android:textColor="@color/white"
+        android:textSize="96sp" />
 
     <TextView
         android:layout_width="match_parent"
