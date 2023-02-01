@@ -61,7 +61,7 @@
             android:layout_marginStart="12dp"
             android:fontFamily="@font/poppins_light"
             android:gravity="center"
-            android:text="I N"
+            android:text="@string/i_n"
             android:textColor="@color/white"
             android:textSize="14sp">
 
