@@ -4,14 +4,18 @@ import android.app.ActivityManager
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
 
 
 class LandingScreen : AppCompatActivity() {
     var githubIcon: ImageView? = null
     var twitterIcon: ImageView? = null
     var instagramIcon: ImageView? = null
+    var startButton: Button? = null
+    var worms: WormDotsIndicator? = null
 
     private val myGithub: String = "https://github.com/Stalkerfish/EasterEggs"
     private val myTwitter: String = "https://twitter.com/StalkerFish2"
@@ -29,6 +33,8 @@ class LandingScreen : AppCompatActivity() {
         githubIcon = findViewById(R.id.github)
         twitterIcon = findViewById(R.id.twitter)
         instagramIcon = findViewById(R.id.instagram)
+        startButton = findViewById(R.id.start)
+        worms = findViewById(R.id.worm_dots_indicator)
 
         githubIcon?.setOnClickListener {
             val openURL = Intent(Intent.ACTION_VIEW)
@@ -46,6 +52,12 @@ class LandingScreen : AppCompatActivity() {
             val openURL = Intent(Intent.ACTION_VIEW)
             openURL.data = Uri.parse(myInstagram)
             startActivity(openURL)
+        }
+
+        startButton?.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 

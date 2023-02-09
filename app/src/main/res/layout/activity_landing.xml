@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/splash_bg"
     tools:context=".LandingScreen">
@@ -134,6 +134,33 @@
              android:contentDescription="@string/github_icon">
         </ImageView>
 
+
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle_bg"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/go"
+        android:textColor="@color/white">
+    </Button>
+
+
+    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+        android:id="@+id/worm_dots_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        app:dotsColor="@color/Ash_Grey"
+        app:dotsCornerRadius="4dp"
+        app:dotsSize="8dp"
+        app:dotsSpacing="3dp"
+        app:dotsStrokeWidth="1dp" />
 
 </LinearLayout>

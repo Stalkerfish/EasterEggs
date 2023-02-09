@@ -1,6 +1,8 @@
 buildscript {
     repositories {
         mavenCentral() // or gradlePluginPortal()
+        mavenLocal()
+        google()
     }
     dependencies {
         classpath("com.dipien:semantic-version-android-gradle-plugin:1.4.1")
