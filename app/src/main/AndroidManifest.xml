@@ -17,9 +17,9 @@
 
         </service>
         <activity
-            android:name=".Splash"
+            android:name=".LandingScreen"
             android:exported="true"
-            android:theme="@style/Theme.Splash">
+            android:theme="@style/Theme.LandingScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

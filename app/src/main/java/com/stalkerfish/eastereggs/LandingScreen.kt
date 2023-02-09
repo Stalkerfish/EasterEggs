@@ -1,16 +1,14 @@
 package com.stalkerfish.eastereggs
 
 import android.app.ActivityManager
-import android.content.Context
 import android.content.Intent
-import android.media.AudioManager
 import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 
-class Splash : AppCompatActivity() {
+class LandingScreen : AppCompatActivity() {
     var githubIcon: ImageView? = null
     var twitterIcon: ImageView? = null
     var instagramIcon: ImageView? = null
@@ -21,7 +19,7 @@ class Splash : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        setContentView(R.layout.activity_landing)
 
         if (!isAppInforegrounded()){
             TODO()

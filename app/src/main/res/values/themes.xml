@@ -32,7 +32,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.Splash" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="Theme.LandingScreen" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/white</item>
         <item name="colorOnPrimary">@color/black</item>
