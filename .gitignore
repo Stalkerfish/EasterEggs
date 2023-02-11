@@ -90,3 +90,4 @@ app/debug/*
 .idea/deploymentTargetDropDown.xml
 .idea/misc.xml
 .pre-commit-config.yaml
+.idea/kotlinScripting.xml
