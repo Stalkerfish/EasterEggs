@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/splash_bg"
+    tools:context=".LandingScreen">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily ="@font/arapey_italic"
+        android:layout_marginTop="152dp"
+        android:layout_marginBottom="86dp"
+        android:textSize ="14sp"
+        android:textStyle="italic"
+        android:textColor ="@color/white"
+        android:gravity="center"
+        android:letterSpacing ="0.05"
+        android:text="@string/welcome_to"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/easter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:text="@string/e_a_s_t_e_r">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/eggs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:text="@string/e_g_g_s_i_n"
+            android:textColor="@color/white"
+            android:textSize="14sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:text="@string/i_n"
+            android:textColor="@color/white"
+            android:textSize="14sp">
+
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/edo"
+        android:gravity="center"
+        android:letterSpacing="0.03"
+        android:text="@string/the"
+        android:textColor="@color/white"
+        android:textSize="96sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/edo"
+        android:gravity="center"
+        android:letterSpacing="0.06"
+        android:text="@string/room"
+        android:textColor="@color/white"
+        android:textSize="96sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily ="@font/arapey_italic"
+        android:layout_marginTop="14dp"
+        android:textSize ="16sp"
+        android:textStyle="italic"
+        android:textColor ="@color/white"
+        android:gravity="center"
+        android:letterSpacing ="0.05"
+        android:text="@string/can_you_visit_every_place_possible"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="vertical"
+        android:layout_marginTop="103dp"
+        android:gravity="top">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp">
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+    </LinearLayout>
+        <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+            android:id="@+id/worm_dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:dotsColor="@color/Ash_Grey"
+            app:dotsCornerRadius="4dp"
+            app:dotsSize="8dp"
+            app:dotsSpacing="3dp"
+            app:dotsStrokeWidth="1dp" />
+
+</LinearLayout>
