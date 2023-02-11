@@ -2,63 +2,42 @@ package com.stalkerfish.eastereggs
 
 import android.app.ActivityManager
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager2.widget.ViewPager2
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
 
 
 class LandingScreen : AppCompatActivity() {
+
     var githubIcon: ImageView? = null
     var twitterIcon: ImageView? = null
     var instagramIcon: ImageView? = null
     var startButton: Button? = null
     var worms: WormDotsIndicator? = null
 
-    private val myGithub: String = "https://github.com/Stalkerfish/EasterEggs"
-    private val myTwitter: String = "https://twitter.com/StalkerFish2"
-    private val myInstagram: String = "https://www.instagram.com/stalkerfish_3/"
+
+    val myGithub: String = "https://github.com/Stalkerfish/EasterEggs"
+    val myTwitter: String = "https://twitter.com/StalkerFish2"
+    val myInstagram: String = "https://www.instagram.com/stalkerfish_3/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_landing)
 
-        if (!isAppInforegrounded()){
+        if (!isAppInforegrounded()) {
             TODO()
         }
 
+        val viewPager: ViewPager2 = findViewById(R.id.viewPager)
+        val worms = findViewById<WormDotsIndicator>(R.id.worm_dots_indicator)
 
-        githubIcon = findViewById(R.id.github)
-        twitterIcon = findViewById(R.id.twitter)
-        instagramIcon = findViewById(R.id.instagram)
-        startButton = findViewById(R.id.start)
-        worms = findViewById(R.id.worm_dots_indicator)
+        val views = listOf(R.id.media, R.id.start)
 
-        githubIcon?.setOnClickListener {
-            val openURL = Intent(Intent.ACTION_VIEW)
-            openURL.data = Uri.parse(myGithub)
-            startActivity(openURL)
-        }
-
-        twitterIcon?.setOnClickListener {
-            val openURL = Intent(Intent.ACTION_VIEW)
-            openURL.data = Uri.parse(myTwitter)
-            startActivity(openURL)
-        }
-
-        instagramIcon?.setOnClickListener {
-            val openURL = Intent(Intent.ACTION_VIEW)
-            openURL.data = Uri.parse(myInstagram)
-            startActivity(openURL)
-        }
-
-        startButton?.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
+        viewPager.adapter = ViewPagerAdapter(views)
+        worms?.attachTo(viewPager)
     }
 
     fun isAppInforegrounded() : Boolean {

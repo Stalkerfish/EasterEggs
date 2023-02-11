@@ -103,64 +103,30 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="103dp">
+        android:layout_height="64dp"
+        android:orientation="vertical"
+        android:layout_marginTop="103dp"
+        android:gravity="top">
 
-         <ImageView
-            android:id="@+id/twitter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="70dp"
-            android:src="@drawable/ic_twitter"
-             android:contentDescription="@string/twitter_icon">
-        </ImageView>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp">
 
-        <ImageView
-            android:id="@+id/instagram"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="70dp"
-            android:src="@drawable/ic_instagram"
-             android:contentDescription="@string/instagram_icon">
-        </ImageView>
-
-        <ImageView
-            android:id="@+id/github"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_github"
-             android:contentDescription="@string/github_icon">
-        </ImageView>
-
-
+        </androidx.viewpager2.widget.ViewPager2>
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/start"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/circle_bg"
-        android:fontFamily="@font/poppins_light"
-        android:text="@string/go"
-        android:textColor="@color/white">
-    </Button>
-
-
-    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
-        android:id="@+id/worm_dots_indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        app:dotsColor="@color/Ash_Grey"
-        app:dotsCornerRadius="4dp"
-        app:dotsSize="8dp"
-        app:dotsSpacing="3dp"
-        app:dotsStrokeWidth="1dp" />
+        <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+            android:id="@+id/worm_dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:dotsColor="@color/Ash_Grey"
+            app:dotsCornerRadius="4dp"
+            app:dotsSize="8dp"
+            app:dotsSpacing="3dp"
+            app:dotsStrokeWidth="1dp" />
 
 </LinearLayout>
