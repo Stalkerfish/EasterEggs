@@ -1,3 +1,23 @@
+## [2.0.0](https://github.com/Stalkerfish/EasterEggs/compare/v1.3.0...v2.0.0) (2023-02-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* **sdk:** embedding links is not available in SDK 33
+
+### Features
+
+* add background music ([0fb604e](https://github.com/Stalkerfish/EasterEggs/commit/0fb604e2fa222b71b278d522bf40ec8b25fa5e38))
+* connect LandingScreen to MainActivity ([f407933](https://github.com/Stalkerfish/EasterEggs/commit/f407933b59c4d5b0f7a3e467015c7459b3b0fc4d))
+* landing page has functionality ([e84fe4b](https://github.com/Stalkerfish/EasterEggs/commit/e84fe4b5f017b6bcfe90de6896681d7926dbfae4))
+* **sdk:** icons open social media ([b244732](https://github.com/Stalkerfish/EasterEggs/commit/b24473259e6972ebc4ecfd78e45e21e7665ac828))
+
+
+### Bug Fixes
+
+* bug in TextViews not being shown ([2823574](https://github.com/Stalkerfish/EasterEggs/commit/28235744b72fbeb14540f592b2bbe956aea87e53))
+* **Splash:** missing falback theme causing app to crash before start ([35cf1d3](https://github.com/Stalkerfish/EasterEggs/commit/35cf1d3450d0baec8df570898e9e2bb96b578e11))
+
 ## [1.3.0](https://github.com/Stalkerfish/EasterEggs/compare/v0.1.0-alpha...v1.3.0) (2023-01-29)
 
 
