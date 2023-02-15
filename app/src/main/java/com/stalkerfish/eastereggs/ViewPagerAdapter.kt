@@ -44,7 +44,7 @@ class ViewPagerAdapter(private var itemView: List<Int>): RecyclerView.Adapter<Vi
                 Log.e("onG", "Go to Main Activity")
 
                 val context = holder.itemView.context
-                val intent = Intent(context, MainActivity::class.java)
+                val intent = Intent(context, HomeActivity::class.java)
 
                 context.startActivity(intent)
             }
