@@ -75,6 +75,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun wardrobeCallback() {
         val hellOrb = HellActivity::class.java
+
         hellWardrobeHelper = WardrobeHelper(this, hellOrb)
         hellWardrobeHelper!!.onTravel()
         hellWardrobeHelper!!.onClose(this)

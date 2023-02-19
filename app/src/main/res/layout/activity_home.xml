@@ -8,7 +8,7 @@
     android:padding="16dp"
     android:gravity="center_horizontal"
     android:background="@drawable/bluried"
-    tools:context=".MainActivity"
+    tools:context=".HomeActivity"
     android:id="@+id/layout">
 
     <TextView
