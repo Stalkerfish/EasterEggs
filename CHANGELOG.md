@@ -1,3 +1,14 @@
+## [2.1.0](https://github.com/Stalkerfish/EasterEggs/compare/v2.0.0...v2.1.0) (2023-02-20)
+
+
+### Features
+
+* abstracts a portal to other activities ([ecb4316](https://github.com/Stalkerfish/EasterEggs/commit/ecb4316f4fdfe4e0f5b067aebcf1799337850acd))
+* add a Stepper-Touch to the UI ([7c82990](https://github.com/Stalkerfish/EasterEggs/commit/7c82990ebac7a99f2292ce06133697ba45a37a25))
+* add animation to some elements in HomeActivity ([827df8f](https://github.com/Stalkerfish/EasterEggs/commit/827df8f6d4c00595c5def0053ce46b3a95452c72))
+* implements the first portal ([809e267](https://github.com/Stalkerfish/EasterEggs/commit/809e2672c4e51df644fdf687e4b3a393d103ec84))
+* implements WardrobeHelper, handling activities flow ([b1c6245](https://github.com/Stalkerfish/EasterEggs/commit/b1c624535e0065382db2df50f04983ea93c418e2))
+
 ## [2.0.0](https://github.com/Stalkerfish/EasterEggs/compare/v1.3.0...v2.0.0) (2023-02-11)
 
 
