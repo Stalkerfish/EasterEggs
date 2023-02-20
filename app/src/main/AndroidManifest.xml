@@ -39,9 +39,9 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".HomeActivity"
             android:exported="true"
-            android:theme="@style/Theme.EasterEggs">
+            android:theme="@style/Theme.Home">
 
             <meta-data
                 android:name="android.app.lib_name"

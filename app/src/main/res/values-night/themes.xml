@@ -39,4 +39,10 @@
         <item name="colorOnPrimary">@color/black</item>
 
     </style>
+
+    <style name="Theme.Home" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/English_Violet</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
 </resources>

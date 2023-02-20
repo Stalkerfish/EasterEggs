@@ -10,8 +10,8 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
-
-class ViewPagerAdapter(private var itemView: List<Int>): RecyclerView.Adapter<ViewPagerAdapter.Pager2ViewHolder>() {
+class ViewPagerAdapter(private var itemView: List<Int>):
+    RecyclerView.Adapter<ViewPagerAdapter.Pager2ViewHolder>() {
 
     inner class Pager2ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val itemGithub: ImageView? = itemView.findViewById(R.id.github)
@@ -44,7 +44,7 @@ class ViewPagerAdapter(private var itemView: List<Int>): RecyclerView.Adapter<Vi
                 Log.e("onG", "Go to Main Activity")
 
                 val context = holder.itemView.context
-                val intent = Intent(context, MainActivity::class.java)
+                val intent = Intent(context, HomeActivity::class.java)
 
                 context.startActivity(intent)
             }
@@ -83,7 +83,6 @@ class ViewPagerAdapter(private var itemView: List<Int>): RecyclerView.Adapter<Vi
         }
     }
 
-
     override fun getItemCount(): Int {
         return itemView.size
     }
@@ -91,7 +90,6 @@ class ViewPagerAdapter(private var itemView: List<Int>): RecyclerView.Adapter<Vi
     override fun getItemViewType(position: Int): Int {
         // Just as an example, return 0 or 2 depending on position
         // Note that unlike in ListView adapters, types don't have to be contiguous
-        return position % 2 * 2;
+        return position % 2 * 2
     }
-
 }
