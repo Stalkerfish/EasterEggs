@@ -1,83 +1,67 @@
 package com.stalkerfish.eastereggs
 
+import android.graphics.Typeface
 import android.os.Bundle
 import android.widget.Button
 import android.widget.GridLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import androidx.core.view.isVisible
 import com.fujiyuu75.sequent.Sequent
+import www.sanju.motiontoast.MotionToast
+import www.sanju.motiontoast.MotionToastStyle
 
 class HomeActivity : AppCompatActivity() {
-    var hellWardrobeHelper: WardrobeHelper? = null
+    var wardrobeHelper: WardrobeHelper? = null
 
     private var introText: TextView? = null
     private var wardrobe: CardView? = null
     private var peopleCounter: TextView? = null
-    private var killButton: Button? = null
+    private var orbButton: Button? = null
     private var hellGateButton: Button? = null
     private var grid: GridLayout? = null
-
-    private var brewCounter: Int = 0
-    private var killCounter: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        wardrobeHelper = WardrobeHelper(this)
+
+        peopleCounter?.text = "0"
+
         introText = findViewById(R.id.intro)
         wardrobe = findViewById(R.id.wardrobe)
         peopleCounter = findViewById(R.id.counter)
-        killButton = findViewById(R.id.kill_button)
-        hellGateButton = findViewById(R.id.hellGateBtn)
+        orbButton = findViewById(R.id.orb_button)
         grid = findViewById(R.id.grid)
 
         Sequent.origin(grid).start()
 
-        peopleCounter?.text = "0"
+        wardrobe?.setOnClickListener { wardrobeCallback() }
 
-        wardrobe?.setOnClickListener{
-            wardrobeCallback()
-        }
+        hellGateButton?.setOnClickListener { wardrobeCallback() }
 
-        hellGateButton?.setOnClickListener {
-            wardrobeCallback()
-        }
-
-        killButton?.setOnClickListener {
-            killButtonCallback()
-        }
+        orbButton?.setOnClickListener { orbButtonCallback() }
     }
 
-    private fun brewCallback() {
-        brewCounter++
-        killButton?.isVisible = true
-        peopleCounter?.text = brewCounter.toString()
-    }
+    private fun orbButtonCallback() {
+        val hellOrb = HellActivity::class.java
 
-    private fun killButtonCallback() {
-        if (brewCounter > 0) {
-            brewCounter--
-            peopleCounter?.text = brewCounter.toString()
-            killCounter++
-
-            when (killCounter) {
-                8 -> { introText?.text = getString(R.string.devilWarning) }
-                9 -> { introText?.text = getString(R.string.secondDevilWarning) }
-                10 -> { hellGateButton?.isVisible = true }
-            }
-
-        }else
-            Toast.makeText(this, "There is no one to kill, asshole", Toast.LENGTH_SHORT).show()
+        wardrobeHelper?.addOrb(hellOrb)
+        peopleCounter?.text = wardrobeHelper?.getOrbs().toString()
     }
 
     private fun wardrobeCallback() {
-        val hellOrb = HellActivity::class.java
-
-        hellWardrobeHelper = WardrobeHelper(this, hellOrb)
-        hellWardrobeHelper!!.onTravel()
-        hellWardrobeHelper!!.onClose(this)
+        try {
+            wardrobeHelper!!.onTravel()
+            peopleCounter?.text = wardrobeHelper?.getOrbs().toString()
+        }
+        catch (_: java.lang.IndexOutOfBoundsException){
+            MotionToast.createToast(this, "Wardrobe Failed",
+                "YOU DON'T HAVE ANY ORBS!", MotionToastStyle.ERROR,
+                MotionToast.GRAVITY_BOTTOM,
+                MotionToast.SHORT_DURATION,
+                Typeface.DEFAULT_BOLD)
+        }
     }
 }
