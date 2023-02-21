@@ -13,7 +13,14 @@
     <color name="Ash_Grey">#C5C6B7</color>
     <color name="Beige">#eef5db</color>
 
-
+    /// other pallet
+    <color name="Oxford_Blue">#FF0B112B</color>
+    <color name="Space_Cadet">#FF252C57</color>
+    <color name="Marian_Blue">#FF34456D</color>
+    <color name="YInMn_Blue">#FF505F8A</color>
+    <color name="Chinese_Violet">#FF776583</color>
+    <color name="Salmon">#FFEC746B</color>
+    
 
     /// default colors
     <color name="purple_200">#FFBB86FC</color>
