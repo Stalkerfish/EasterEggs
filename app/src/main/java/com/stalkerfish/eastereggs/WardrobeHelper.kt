@@ -5,30 +5,26 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 
 class WardrobeHelper(private val context: Context):
-    WardrobeHolder, AppCompatActivity(){
+    WardrobeHolder, AppCompatActivity() {
 
-    private val mOrbs = mutableListOf<Class<*>>()
+    private val mOrbs = OrbShelf.getOrbs()
 
-    fun getOrbs(): Int{
-        return mOrbs.size
+    fun getOrbsList(): List<String> {
+        return mOrbs.map { it.id }
     }
 
-    fun addOrb(Orb: Class<*>){
-        mOrbs.add(Orb)
-    }
-
-    private fun removeOrb(Orb: Class<*>) {
-        mOrbs.remove(Orb)
+    fun getOrbsSize(): Int {
+        return OrbShelf.getOrbsSize()
     }
 
     override fun Intent(context: Context): Intent {
-        return Intent(this, mOrbs[0])
+        return Intent(this, mOrbs[0].locus)
     }
 
     override fun onTravel() {
-        val intent = Intent(context, mOrbs[0])
+        val intent = Intent(context, mOrbs[0].locus)
         context.startActivity(intent);
-        removeOrb(mOrbs[0])
+        OrbShelf.removeOrb(mOrbs[0])
         finish()
     }
 }

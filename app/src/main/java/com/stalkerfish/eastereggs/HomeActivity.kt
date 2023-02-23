@@ -5,9 +5,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.GridLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.fujiyuu75.sequent.Sequent
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import www.sanju.motiontoast.MotionToast
 import www.sanju.motiontoast.MotionToastStyle
 
@@ -16,7 +18,7 @@ class HomeActivity : AppCompatActivity() {
 
     private var introText: TextView? = null
     private var wardrobe: CardView? = null
-    private var peopleCounter: TextView? = null
+    private var orbCounter: TextView? = null
     private var orbButton: Button? = null
     private var hellGateButton: Button? = null
     private var grid: GridLayout? = null
@@ -25,19 +27,25 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        OrbShelf.eraseShelf()
+
         wardrobeHelper = WardrobeHelper(this)
 
-        peopleCounter?.text = "0"
+        orbCounter?.text = "0"
 
         introText = findViewById(R.id.intro)
         wardrobe = findViewById(R.id.wardrobe)
-        peopleCounter = findViewById(R.id.counter)
+        orbCounter = findViewById(R.id.counter)
         orbButton = findViewById(R.id.orb_button)
         grid = findViewById(R.id.grid)
 
         Sequent.origin(grid).start()
 
-        wardrobe?.setOnClickListener { wardrobeCallback() }
+        wardrobe?.setOnClickListener {
+            val dialog = WardrobeShelf()
+            dialog.show(supportFragmentManager, dialog.tag)
+
+        }
 
         hellGateButton?.setOnClickListener { wardrobeCallback() }
 
@@ -47,14 +55,14 @@ class HomeActivity : AppCompatActivity() {
     private fun orbButtonCallback() {
         val hellOrb = HellActivity::class.java
 
-        wardrobeHelper?.addOrb(hellOrb)
-        peopleCounter?.text = wardrobeHelper?.getOrbs().toString()
+        OrbShelf.addOrb(hellOrb)
+        orbCounter?.text = OrbShelf.getOrbsSize().toString()
     }
 
     private fun wardrobeCallback() {
         try {
             wardrobeHelper!!.onTravel()
-            peopleCounter?.text = wardrobeHelper?.getOrbs().toString()
+            orbCounter?.text = wardrobeHelper?.getOrbsSize().toString()
         }
         catch (_: java.lang.IndexOutOfBoundsException){
             MotionToast.createToast(this, "Wardrobe Failed",
