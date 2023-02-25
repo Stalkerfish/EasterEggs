@@ -1,3 +1,5 @@
+/* This is the main room. It is like the player base*/
+
 package com.stalkerfish.eastereggs
 
 import android.graphics.Typeface
@@ -5,16 +7,14 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.GridLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.fujiyuu75.sequent.Sequent
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import www.sanju.motiontoast.MotionToast
 import www.sanju.motiontoast.MotionToastStyle
 
 class HomeActivity : AppCompatActivity() {
-    var wardrobeHelper: WardrobeHelper? = null
+    private var wardrobeHelper: WardrobeHelper? = null
 
     private var introText: TextView? = null
     private var wardrobe: CardView? = null
@@ -27,7 +27,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        OrbShelf.eraseShelf()
+        OrbShelf.eraseShelf()   // Erase the list of Orbs on start
 
         wardrobeHelper = WardrobeHelper(this)
 
@@ -39,11 +39,11 @@ class HomeActivity : AppCompatActivity() {
         orbButton = findViewById(R.id.orb_button)
         grid = findViewById(R.id.grid)
 
-        Sequent.origin(grid).start()
+        Sequent.origin(grid).start()    // Reveals UI items with a discrete animation
 
         wardrobe?.setOnClickListener {
             val dialog = WardrobeShelf()
-            dialog.show(supportFragmentManager, dialog.tag)
+            dialog.show(supportFragmentManager, dialog.tag)     // Display the dialog
 
         }
 

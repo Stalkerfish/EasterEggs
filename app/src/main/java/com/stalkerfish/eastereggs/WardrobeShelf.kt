@@ -1,5 +1,10 @@
 package com.stalkerfish.eastereggs
 
+/**
+* This class deal with the Wardrobe button click,
+* it shows a Dialog containing a ListView of Orbs stored
+* in the {@link OrbShelf} */
+
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle

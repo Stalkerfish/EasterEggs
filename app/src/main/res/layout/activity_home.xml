@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,18 +9,17 @@
     android:padding="16dp"
     android:gravity="center_horizontal"
     android:background="@drawable/tend"
-    tools:context=".HomeActivity"
-    android:id="@+id/layout">
+    tools:context=".HomeActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:text="@string/home_room"
-        android:fontFamily="serif-monospace"
+        android:fontFamily="serif"
         android:textStyle="bold"
         android:textSize="48sp"
-        android:textColor="@color/Beige"
+        android:textColor="@color/Space_Cadet"
         android:textAlignment="center" />
 
     <TextView
