@@ -66,7 +66,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="3"
-                    android:src="@drawable/ic_flame">
+                    android:src="@drawable/ic_flame"
+                    android:contentDescription="@string/wardrobe">
                 </ImageView>
 
                 <TextView
@@ -76,8 +77,8 @@
                     android:gravity="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:text="WARDROBE">
+                    android:textColor="@color/white"
+                    android:text="@string/wardrobe">
 
                 </TextView>
 
@@ -104,7 +105,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="3"
                     android:src="@drawable/ic_witch_face"
-                    android:contentDescription="YOUR CHARACTER">
+                    android:contentDescription="@string/your_character">
 
                 </ImageView>
 
@@ -114,9 +115,9 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
-                    android:text="CHARACTER">
+                    android:text="@string/character">
 
                 </TextView>
             </LinearLayout>
@@ -140,7 +141,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="4"
-                    android:src="@drawable/ic_rolling_suitcase">
+                    android:src="@drawable/ic_rolling_suitcase"
+                    android:contentDescription="@string/bag">
                 </ImageView>
 
                 <TextView
@@ -150,8 +152,8 @@
                     android:gravity="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:text="BAG">
+                    android:textColor="@color/white"
+                    android:text="@string/bag">
 
                 </TextView>
             </LinearLayout>
@@ -176,7 +178,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="3"
-                    android:src="@drawable/ic_big_gear">
+                    android:src="@drawable/ic_big_gear"
+                    android:contentDescription="@string/settings">
                 </ImageView>
 
                 <TextView
@@ -186,8 +189,8 @@
                     android:gravity="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:text="SETTINGS">
+                    android:textColor="@color/white"
+                    android:text="@string/settings">
 
                 </TextView>
             </LinearLayout>
@@ -220,9 +223,9 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="90dp"
             android:backgroundTint="@color/Ruber"
-            android:text="Increase Orbs"
+            android:text="@string/increase_orbs"
             android:textColor="@color/white"
-            android:textSize="14sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             tools:visibility="visible" />
 
