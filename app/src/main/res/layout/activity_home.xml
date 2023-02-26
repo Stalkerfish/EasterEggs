@@ -206,16 +206,6 @@
         android:paddingEnd="10dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/counter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="casual"
-            android:text="@string/people_count"
-            android:textColor="#C56F73"
-            android:textSize="78sp"
-            android:textStyle="bold" />
-
         <Button
             android:id="@+id/orb_button"
             android:layout_width="170dp"
