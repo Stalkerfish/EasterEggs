@@ -21,10 +21,10 @@ class WardrobeHelper(private val context: Context):
         return Intent(this, mOrbs[0].locus)
     }
 
-    override fun onTravel() {
-        val intent = Intent(context, mOrbs[0].locus)
+    override fun onTravel(orb: Orb) {
+        val intent = Intent(context, orb.locus)
         context.startActivity(intent);
-        OrbShelf.removeOrb(mOrbs[0])
+        OrbShelf.removeOrb(orb)
         finish()
     }
 }
