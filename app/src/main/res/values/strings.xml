@@ -20,4 +20,12 @@
     <string name="e_g_g_s_i_n"> E G G S</string>
     <string name="i_n">I N</string>
     <string name="go">GO</string>
+    <string name="home_room">Home Room</string>
+    <string name="settings">SETTINGS</string>
+    <string name="bag">BAG</string>
+    <string name="character">CHARACTER</string>
+    <string name="your_character">YOUR CHARACTER</string>
+    <string name="wardrobe">WARDROBE</string>
+    <string name="increase_orbs">Increase Orbs</string>
+    <string name="there_is_no_orbs_here">There is no Orbs here!</string>
 </resources>

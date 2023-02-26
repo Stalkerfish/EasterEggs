@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,19 +8,18 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center_horizontal"
-    android:background="@drawable/bluried"
-    tools:context=".HomeActivity"
-    android:id="@+id/layout">
+    android:background="@drawable/tend"
+    tools:context=".HomeActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:text="@string/easter_eggs"
-        android:fontFamily="serif-monospace"
+        android:text="@string/home_room"
+        android:fontFamily="serif"
         android:textStyle="bold"
         android:textSize="48sp"
-        android:textColor="@color/Beige"
+        android:textColor="@color/Space_Cadet"
         android:textAlignment="center" />
 
     <TextView
@@ -54,7 +54,7 @@
             android:layout_marginBottom="10dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="5dp"
-            app:cardBackgroundColor="@color/gray">
+            app:cardBackgroundColor="@color/Chinese_Violet">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -66,7 +66,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="3"
-                    android:src="@drawable/ic_flame">
+                    android:src="@drawable/ic_flame"
+                    android:contentDescription="@string/wardrobe">
                 </ImageView>
 
                 <TextView
@@ -76,8 +77,8 @@
                     android:gravity="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:text="WARDROBE">
+                    android:textColor="@color/white"
+                    android:text="@string/wardrobe">
 
                 </TextView>
 
@@ -91,7 +92,7 @@
             android:layout_marginBottom="10dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="5dp"
-            app:cardBackgroundColor="@color/gray">
+            app:cardBackgroundColor="@color/Chinese_Violet">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -104,7 +105,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="3"
                     android:src="@drawable/ic_witch_face"
-                    android:contentDescription="YOUR CHARACTER">
+                    android:contentDescription="@string/your_character">
 
                 </ImageView>
 
@@ -114,9 +115,9 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
-                    android:text="CHARACTER">
+                    android:text="@string/character">
 
                 </TextView>
             </LinearLayout>
@@ -128,7 +129,7 @@
             android:layout_height="170dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="5dp"
-            app:cardBackgroundColor="@color/gray">
+            app:cardBackgroundColor="@color/Chinese_Violet">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -140,7 +141,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="4"
-                    android:src="@drawable/ic_rolling_suitcase">
+                    android:src="@drawable/ic_rolling_suitcase"
+                    android:contentDescription="@string/bag">
                 </ImageView>
 
                 <TextView
@@ -150,8 +152,8 @@
                     android:gravity="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:text="BAG">
+                    android:textColor="@color/white"
+                    android:text="@string/bag">
 
                 </TextView>
             </LinearLayout>
@@ -164,7 +166,7 @@
             android:layout_height="170dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="5dp"
-            app:cardBackgroundColor="@color/gray">
+            app:cardBackgroundColor="@color/Chinese_Violet">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -176,7 +178,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="3"
-                    android:src="@drawable/ic_big_gear">
+                    android:src="@drawable/ic_big_gear"
+                    android:contentDescription="@string/settings">
                 </ImageView>
 
                 <TextView
@@ -186,8 +189,8 @@
                     android:gravity="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:text="SETTINGS">
+                    android:textColor="@color/white"
+                    android:text="@string/settings">
 
                 </TextView>
             </LinearLayout>
@@ -203,56 +206,18 @@
         android:paddingEnd="10dp"
         android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginStart="30dp">
+        <Button
+            android:id="@+id/orb_button"
+            android:layout_width="170dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="90dp"
+            android:backgroundTint="@color/Ruber"
+            android:text="@string/increase_orbs"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:visibility="visible" />
 
-            <TextView
-                android:id="@+id/counter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/people_count"
-                android:textColor="@color/Ash_Grey"
-                android:textSize="78sp"
-                android:fontFamily="casual"
-                android:textStyle="bold"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/kill_button"
-                android:layout_width="170dp"
-                android:layout_height="56dp"
-                android:layout_gravity="end"
-                android:backgroundTint="@color/Ruber"
-                android:text="@string/kill_a_person"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:visibility="invisible"
-                tools:visibility="visible" />
-
-            <Button
-                android:id="@+id/hellGateBtn"
-                android:layout_width="170dp"
-                android:layout_height="56dp"
-                android:layout_gravity="end"
-                android:backgroundTint="@color/Sizzling_Red"
-                android:text="@string/hellGateIntro"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:visibility="invisible"
-                tools:visibility="visible" />
-
-        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

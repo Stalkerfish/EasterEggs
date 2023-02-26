@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 
 interface WardrobeHolder {
-    fun onTravel()
-    fun onClose(context: Context)
+    fun onTravel(orb: Orb)
     fun Intent(context: Context): Intent
 }

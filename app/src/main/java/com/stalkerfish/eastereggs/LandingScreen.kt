@@ -32,7 +32,7 @@ class LandingScreen : AppCompatActivity() {
         }
 
         val viewPager: ViewPager2 = findViewById(R.id.viewPager)
-        val worms = findViewById<WormDotsIndicator>(R.id.worm_dots_indicator)
+        worms = findViewById(R.id.worm_dots_indicator)
 
         val views = listOf(R.id.media, R.id.start)
 
