@@ -28,4 +28,10 @@
     <string name="wardrobe">WARDROBE</string>
     <string name="increase_orbs">Increase Orbs</string>
     <string name="there_is_no_orbs_here">There is no Orbs here!</string>
+    <string name="landscape">landscape</string>
+    <string name="grass">grass</string>
+    <string name="tree">tree</string>
+    <string name="sky">sky</string>
+    <string name="sun">sun</string>
+    <string name="birds">birds</string>
 </resources>

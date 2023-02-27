@@ -1,9 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/Theme.Earth">
 
-</LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:contentDescription="@string/sky"
+        android:src="@drawable/oval">
+
+    </ImageView>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="22.2dp"
+        android:layout_marginStart="318dp"
+        android:layout_marginTop="102dp"
+        android:src="@drawable/birds"
+        android:contentDescription="@string/birds">
+
+    </ImageView>
+
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/birds"
+        android:src="@drawable/birds">
+
+    </ImageView>
+
+    <ImageView
+        android:layout_width="63dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="327dp"
+        android:contentDescription="@string/sun"
+        android:src="@drawable/sun">
+
+    </ImageView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:layout_marginStart="7.1dp"
+        android:src="@drawable/tree"
+        android:contentDescription="@string/tree">
+
+    </ImageView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="186dp"
+        android:src="@drawable/grass"
+        android:contentDescription="@string/grass">
+
+    </ImageView>
+
+</FrameLayout>
