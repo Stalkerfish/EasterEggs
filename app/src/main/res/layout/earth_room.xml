@@ -1,68 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/Theme.Earth">
+    style="@style/Theme.Earth"
+    android:background="@color/Jade">
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:contentDescription="@string/sky"
-        android:src="@drawable/oval">
-
-    </ImageView>
-
-    <ImageView
-        android:layout_width="25dp"
-        android:layout_height="22.2dp"
-        android:layout_marginStart="318dp"
-        android:layout_marginTop="102dp"
-        android:src="@drawable/birds"
-        android:contentDescription="@string/birds">
-
-    </ImageView>
-
-
-    <ImageView
-        android:layout_width="25dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="284dp"
-        android:layout_marginTop="32dp"
-        android:contentDescription="@string/birds"
-        android:src="@drawable/birds">
-
-    </ImageView>
-
-    <ImageView
-        android:layout_width="63dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="327dp"
-        android:contentDescription="@string/sun"
-        android:src="@drawable/sun">
-
-    </ImageView>
-
-    <ImageView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:layout_marginStart="7.1dp"
-        android:src="@drawable/tree"
-        android:contentDescription="@string/tree">
+        android:orientation="vertical">
 
-    </ImageView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/landscape"
+            tools:ignore="ContentDescription">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="186dp"
-        android:src="@drawable/grass"
-        android:contentDescription="@string/grass">
+        </ImageView>
 
-    </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="31dp"
+            android:gravity="center"
+            android:fontFamily="@font/googlesansbold"
+            android:textColor="@color/Honeydew"
+            android:textSize="48sp"
+            android:text="@string/earth_room">
 
-</FrameLayout>
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="349dp"
+            android:layout_height="115dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="31dp"
+            android:layout_marginBottom="22dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="24dp"
+            android:orientation="horizontal"
+            android:background="@drawable/drop_button">
+
+            <ImageView
+                android:layout_width="81.648dp"
+                android:layout_height="82dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="26dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/molecule"
+                tools:ignore="ContentDescription">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="206dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:gravity="center|end"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/googlesansbold"
+                android:textSize="21sp"
+                android:textColor="@color/Drab_Dark_Brown"
+                android:text="@string/the_periodic_table_of_elements">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@color/Nyanza">
+
+                    <ImageView
+                        android:layout_width="102dp"
+                        android:layout_height="112dp"
+                        android:background="@color/Nyanza"
+                        android:src="@drawable/hydrogen"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/Nyanza"
+                        android:fontFamily="@font/googlesansbold"
+                        android:textSize="12sp"
+                        android:textColor="@color/Drab_Dark_Brown"
+                        android:text="@string/what_is_the_element"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:layout_marginStart="30dp"
+                app:cardCornerRadius="15dp"
+                app:cardBackgroundColor="@color/Nyanza">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/Nyanza"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="99dp"
+                        android:layout_height="98dp"
+                        android:background="@color/Nyanza"
+                        android:src="@drawable/bohr"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Nyanza"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/googlesansbold"
+                        android:textSize="16sp"
+                        android:textColor="@color/Drab_Dark_Brown"
+                        android:text="@string/play_with_the_elements"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="349dp"
+            android:layout_height="115dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="31dp"
+            android:layout_marginBottom="22dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="22dp"
+            android:orientation="horizontal"
+            android:background="@drawable/reverse_drop_button">
+
+            <TextView
+                android:layout_width="169dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:gravity="center|start"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/googlesansbold"
+                android:textSize="32sp"
+                android:textColor="@color/Drab_Dark_Brown"
+                android:text="@string/inventory">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="80.41dp"
+                android:layout_height="94.44dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="55dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/bag"
+                tools:ignore="ContentDescription">
+
+            </ImageView>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
