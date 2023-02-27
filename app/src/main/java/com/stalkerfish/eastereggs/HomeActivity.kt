@@ -3,6 +3,7 @@
 package com.stalkerfish.eastereggs
 
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.GridLayout
 import android.widget.TextView
@@ -18,6 +19,9 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this.window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_home)
 
         OrbShelf.eraseShelf()   // Erase the list of Orbs on start
@@ -39,8 +43,8 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun orbButtonCallback() {
-        val hellOrb = HellActivity::class.java
+        val earthOrb = EarthRoom::class.java
 
-        OrbShelf.addOrb(hellOrb)
+        OrbShelf.addOrb(earthOrb)
     }
 }
