@@ -82,6 +82,7 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/todays_element"
                 android:layout_width="150dp"
                 android:layout_height="170dp"
                 app:cardCornerRadius="15dp">
