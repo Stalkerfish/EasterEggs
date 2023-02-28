@@ -1,14 +1,12 @@
 package com.stalkerfish.eastereggs
 
-import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -19,8 +17,8 @@ class EarthInventory: DialogFragment() {
 
     inner class EarthInventoryHelper: AppCompatActivity(){
 
-        fun getList(){
-            TODO()
+        fun getList(): ArrayList<Item> {
+            return Inventory.getList()
         }
 
     }
@@ -40,8 +38,13 @@ class EarthInventory: DialogFragment() {
         val itemsList: ListView = view.findViewById(R.id.inventory_items)
         val emptySign: TextView? = view.findViewById(R.id.no_items_sign)
 
-        emptySign?.isVisible = true
-
         val inventoryItems = EarthInventoryHelper().getList()
+
+        if (inventoryItems.isEmpty())
+            emptySign?.isVisible = true
+        else {
+            val adapter = ArrayAdapter(requireContext(), R.layout.row_earth, inventoryItems)
+            itemsList.adapter = adapter
+        }
     }
 }
