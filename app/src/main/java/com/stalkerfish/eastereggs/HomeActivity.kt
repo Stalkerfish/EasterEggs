@@ -45,7 +45,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun orbButtonCallback() {
-        val earthOrb = EarthRoom::class.java
+        val earthOrb = Orb(EarthRoom::class.java, "Earth Orb")
 
         OrbShelf.addOrb(earthOrb)
     }

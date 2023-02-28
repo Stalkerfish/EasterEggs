@@ -42,6 +42,7 @@
         </activity>
         <activity
             android:name=".HellActivity"
+            android:noHistory="true"
             android:exported="true"
             android:theme="@style/Theme.Hell">
             <meta-data
@@ -50,6 +51,7 @@
         </activity>
         <activity
             android:name=".EarthRoom"
+            android:noHistory="true"
             android:exported="true"
             android:theme="@style/Theme.Earth">
             <meta-data

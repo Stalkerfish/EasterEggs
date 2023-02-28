@@ -50,7 +50,6 @@
         <item name="colorPrimary">@color/Jade</item>
         <item name="colorOnPrimary">@color/Celadon</item>
         <item name="colorPrimaryVariant">@color/Light_Celadon</item>
-        <item name="android:background">@color/Jade</item>
         <item name="android:fontFamily">@font/googlesansbold</item>
 
         <!-- Status bar color. -->
