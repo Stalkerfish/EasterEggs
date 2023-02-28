@@ -1,3 +1,13 @@
+## [2.2.0](https://github.com/Stalkerfish/EasterEggs/compare/v2.1.0...v2.2.0) (2023-02-26)
+
+
+### Features
+
+* add click listeners to listview item on Wardrobe ([50c2dbc](https://github.com/Stalkerfish/EasterEggs/commit/50c2dbc557784f8633a9fd1353085affe4df8b51))
+* display an empty list warning in the wardrobe dialog ([d7a7afd](https://github.com/Stalkerfish/EasterEggs/commit/d7a7afd3fed25dee7b5307db9245cd1f957d43ec))
+* extends Wardrobe functionality with a dialog ([8de1adf](https://github.com/Stalkerfish/EasterEggs/commit/8de1adf1b73073cbbda42011affb7e83228d74bf))
+* **WardrobeHelper:** use orbs as consumable items for traveling across rooms ([06aaa48](https://github.com/Stalkerfish/EasterEggs/commit/06aaa4808d79d2d57a6723cc5a0b966db081dba9))
+
 ## [2.1.0](https://github.com/Stalkerfish/EasterEggs/compare/v2.0.0...v2.1.0) (2023-02-20)
 
 
