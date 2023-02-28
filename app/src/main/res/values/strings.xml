@@ -40,4 +40,5 @@
     <string name="hydrogen">Hydrogen</string>
     <string name="what_is_the_element">What\'s the element?</string>
     <string name="play_with_the_elements">Play with the\n elements!</string>
+    <string name="empty_sign">Your inventory is empty!\n\nhint: Try finding out\nThe Element of the Day!</string>
 </resources>

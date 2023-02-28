@@ -156,6 +156,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/inventory"
             android:layout_width="349dp"
             android:layout_height="115dp"
             android:layout_gravity="center"
