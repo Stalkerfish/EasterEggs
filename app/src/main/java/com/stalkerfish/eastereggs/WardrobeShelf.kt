@@ -39,7 +39,7 @@ class WardrobeShelf: DialogFragment(){
         val lvOrbs: ListView? = view.findViewById(R.id.lvOrbs)
         val emptyListSign: TextView? = view.findViewById(R.id.emptyOrbs)
 
-        val mOrbList = WardrobeHelper(requireContext()).getOrbsList()
+        val mOrbList = WardrobeHelper().getOrbsList()
 
         if (mOrbList.isEmpty())
             emptyListSign?.isVisible = true
@@ -61,7 +61,7 @@ class WardrobeShelf: DialogFragment(){
                 val mOrb = Pair(selectedOrb, jOrbsList[position])
 
                 try {
-                    WardrobeHelper(requireContext()).onTravel(mOrb.second)
+                    mOrb.second.use(requireContext())
                     adapter.notifyDataSetChanged()
 
                     this.dismiss()

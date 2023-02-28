@@ -17,14 +17,7 @@ import androidx.fragment.app.DialogFragment
 
 class EarthInventory: DialogFragment() {
 
-    inner class EarthInventoryHelper: WardrobeHolder, AppCompatActivity(){
-        override fun onTravel(orb: Orb) {
-            TODO("Not yet implemented")
-        }
-
-        override fun Intent(context: Context): Intent {
-            TODO("Not yet implemented")
-        }
+    inner class EarthInventoryHelper: AppCompatActivity(){
 
         fun getList(){
             TODO()
@@ -49,6 +42,6 @@ class EarthInventory: DialogFragment() {
 
         emptySign?.isVisible = true
 
-        // val inventoryItems = EarthInventoryHelper().getList()
+        val inventoryItems = EarthInventoryHelper().getList()
     }
 }
