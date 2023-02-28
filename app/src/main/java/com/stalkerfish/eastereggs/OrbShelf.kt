@@ -11,8 +11,8 @@ object OrbShelf {
         return orbsList.size
     }
 
-    fun addOrb(orb: Class<*>) {
-        orbsList.add(Orb(orb))
+    fun addOrb(orb: Orb) {
+        orbsList.add(orb)
     }
 
     fun removeOrb(orb: Orb) {

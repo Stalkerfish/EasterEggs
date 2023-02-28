@@ -8,6 +8,7 @@ data class Orb(
     override val id: String = locus.simpleName
 ): Item(), WardrobeHolder{
     override fun use(context: Context?) {
+        Inventory.removeItem(this)
         onTravel(context!!, this)
     }
 

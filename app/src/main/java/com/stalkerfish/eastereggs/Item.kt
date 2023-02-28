@@ -8,6 +8,6 @@ open class Item {
     open val id: String? = locus?.simpleName
 
     open fun use(context: Context?){
-        TODO()
+        Inventory.removeItem(this)
     }
 }

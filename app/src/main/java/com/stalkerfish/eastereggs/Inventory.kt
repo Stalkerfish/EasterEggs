@@ -15,11 +15,15 @@ object Inventory {
         itemList.add(item)
     }
 
-    fun removeOrb(item: Item) {
+    fun removeItem(item: Item) {
         itemList.remove(item)
     }
 
     fun eraseShelf(){
         itemList.clear()
+    }
+
+    fun getItemName(): List<String?> {
+        return itemList.map { it.id }
     }
 }
