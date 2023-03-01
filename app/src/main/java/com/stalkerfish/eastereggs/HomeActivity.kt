@@ -8,7 +8,6 @@ import android.widget.LinearLayout
 import android.view.WindowManager
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.fujiyuu75.sequent.Sequent
 
 class HomeActivity : AppCompatActivity() {
     private var wardrobe: FrameLayout? = null
@@ -37,15 +36,6 @@ class HomeActivity : AppCompatActivity() {
         journal = findViewById(R.id.journal)
         phone = findViewById(R.id.phone)
         settings = findViewById(R.id.settings)
-
-        val row1 = findViewById<LinearLayout>(R.id.first_row)
-        val row2 = midBtn
-        val row3 = findViewById<LinearLayout>(R.id.last_row)
-
-        Sequent.origin(row1).start()    // Reveals UI items with a discrete animation
-        Sequent.origin(row2).start()
-        Sequent.origin(row3).start()
-
 
         wardrobe?.setOnClickListener {
             val dialog = WardrobeShelf()
