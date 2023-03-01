@@ -30,8 +30,19 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Home">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".HellActivity"
+            android:noHistory="true"
             android:exported="true"
             android:theme="@style/Theme.Hell">
             <meta-data
@@ -39,10 +50,10 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name=".EarthRoom"
+            android:noHistory="true"
             android:exported="true"
-            android:theme="@style/Theme.Home">
-
+            android:theme="@style/Theme.Earth">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

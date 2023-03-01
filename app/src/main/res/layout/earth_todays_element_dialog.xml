@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="50dp"
+    android:background="@drawable/inventory_radius">
+
+    <TextView
+        android:id="@+id/not_implemented_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:fontFamily="@font/googlesansbold"
+        android:textSize="20sp"
+        android:textColor="@color/Drab_Dark_Brown"
+        android:text="@string/not_implemented_yet"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/retrieve_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/inventory_radius"
+        android:backgroundTint="@color/Dark_Moss_Green"
+        android:fontFamily="@font/googlesansbold"
+        android:gravity="center"
+        android:padding="18dp"
+        android:text="@string/retrieve_an_item"
+        android:textColor="@color/Honeydew"
+        android:textSize="16sp">
+
+    </Button>
+
+
+</FrameLayout>

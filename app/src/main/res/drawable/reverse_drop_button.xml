@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:thickness="0dp">
+
+    <solid android:color="@color/Nyanza"/>
+
+    <size
+        android:height="115dp"
+        android:width="349dp">
+
+    </size>
+    <corners
+        android:topLeftRadius="10dp"
+        android:topRightRadius="45dp"
+        android:bottomRightRadius="10dp"
+        android:bottomLeftRadius="10dp">
+
+    </corners>
+</shape>

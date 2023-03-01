@@ -23,10 +23,26 @@
     <string name="home_room">Home Room</string>
     <string name="settings">SETTINGS</string>
     <string name="bag">BAG</string>
+    <string name="inventory">Inventory</string>
     <string name="character">CHARACTER</string>
     <string name="your_character">YOUR CHARACTER</string>
     <string name="wardrobe">WARDROBE</string>
     <string name="increase_orbs">Increase Orbs</string>
     <string name="there_is_no_orbs_here">There is no Orbs here!</string>
+
     <string name="no_ideas_for_this_button_yet">No ideas for this button yet!</string>
+    <string name="landscape">landscape</string>
+    <string name="grass">grass</string>
+    <string name="tree">tree</string>
+    <string name="sky">sky</string>
+    <string name="sun">sun</string>
+    <string name="birds">birds</string>
+    <string name="earth_room">EARTH ROOM</string>
+    <string name="the_periodic_table_of_elements">The \nPeriodic \nTable of Elements </string>
+    <string name="hydrogen">Hydrogen</string>
+    <string name="what_is_the_element">What\'s the element?</string>
+    <string name="play_with_the_elements">Play with the\n elements!</string>
+    <string name="empty_sign">Your inventory is empty!\n\nhint: Try finding out\nThe Element of the Day!</string>
+    <string name="not_implemented_yet">Not implemented yet!</string>
+    <string name="retrieve_an_item">Retrieve an item</string>
 </resources>

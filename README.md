@@ -3,7 +3,7 @@
 ---
 <div align="center">
 
-[![Android CI](https://github.com/Stalkerfish/EasterEggs/actions/workflows/android.yml/badge.svg)](https://github.com/Stalkerfish/EasterEggs/actions/workflows/android.yml) ![GitHub package.json version](https://img.shields.io/github/package-json/v/StalkerFish/EasterEggs?label=current%20version)
+[![Android CI](https://github.com/Stalkerfish/EasterEggs/actions/workflows/android.yml/badge.svg)](https://github.com/Stalkerfish/EasterEggs/actions/workflows/android.yml) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/stalkerfish/eastereggs?label=current%20version)
 
 </div>
 
