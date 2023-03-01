@@ -6,218 +6,129 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
     android:gravity="center_horizontal"
-    android:background="@drawable/tend"
+    android:background="@color/Rose_Red"
     tools:context=".HomeActivity">
 
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:text="@string/home_room"
-        android:fontFamily="serif"
-        android:textStyle="bold"
-        android:textSize="48sp"
-        android:textColor="@color/Space_Cadet"
-        android:textAlignment="center" />
-
-    <TextView
-        android:id="@+id/intro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/intro"
-        android:fontFamily="serif-monospace"
-        android:textStyle="bold|italic"
-        android:textSize="28sp"
-        android:textColor="@color/Beige"
-        android:textAlignment="center"
-        android:layout_marginTop="60dp"
-        />
-
-    <GridLayout
-        android:id="@+id/grid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="14dp"
-        android:alignmentMode="alignMargins"
-        android:rowCount="2"
-        android:columnCount="2"
-        android:columnOrderPreserved="false">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/wardrobe"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp"
-            app:cardBackgroundColor="@color/Chinese_Violet">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="5dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:src="@drawable/ic_flame"
-                    android:contentDescription="@string/wardrobe">
-                </ImageView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:text="@string/wardrobe">
-
-                </TextView>
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/character"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_marginBottom="10dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp"
-            app:cardBackgroundColor="@color/Chinese_Violet">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="5dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:src="@drawable/ic_witch_face"
-                    android:contentDescription="@string/your_character">
-
-                </ImageView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:text="@string/character">
-
-                </TextView>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/bag"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp"
-            app:cardBackgroundColor="@color/Chinese_Violet">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="5dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="4"
-                    android:src="@drawable/ic_rolling_suitcase"
-                    android:contentDescription="@string/bag">
-                </ImageView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:text="@string/bag">
-
-                </TextView>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/settings"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp"
-            app:cardBackgroundColor="@color/Chinese_Violet">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="5dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:src="@drawable/ic_big_gear"
-                    android:contentDescription="@string/settings">
-                </ImageView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:text="@string/settings">
-
-                </TextView>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-    </GridLayout>
+        android:layout_height="282dp"
+        android:orientation="vertical"
+        android:background="@drawable/frame_transformed">
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="10dp"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/orb_button"
-            android:layout_width="170dp"
-            android:layout_height="56dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="90dp"
-            android:backgroundTint="@color/Ruber"
-            android:text="@string/increase_orbs"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            tools:visibility="visible" />
+        <TextView
+            android:id="@+id/home_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/googlesansbold"
+            android:textSize="36sp"
+            android:textColor="@color/Timberwolf"
+            android:text="@string/home_room">
+
+        </TextView>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="4dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/just_a_line">
+        </FrameLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/first_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/wardrobe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/wardrobe">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/bag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:background="@drawable/backpack">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mid_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:background="@drawable/rectangle">
+
+        <TextView
+            android:id="@+id/mid_button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/googlesansbold"
+            android:textSize="16sp"
+            android:textColor="@color/Platinum"
+            android:text="@string/no_ideas_for_this_button_yet">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/last_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/journal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/book">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38.31dp"
+            android:background="@drawable/phone">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38.31dp"
+            android:background="@drawable/settings">
+
+        </FrameLayout>
+    </LinearLayout>
+
+
 </LinearLayout>

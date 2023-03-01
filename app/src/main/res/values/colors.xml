@@ -21,6 +21,17 @@
     <color name="Chinese_Violet">#FF776583</color>
     <color name="Salmon">#FFEC746B</color>
     
+    /// home palette
+    <color name="Black_Olive">#4A4C43</color>
+    <color name="Rose_Red">#B9314F</color>
+    <color name="Indian_Red">#C45B67</color>
+    <color name="Light_Indian_Red">#C7696F</color>
+    <color name="Rosy_Brown">#D5A18E</color>
+    <color name="Pale_Dogwood">#DAB2A6</color>
+    <color name="Light_Pale_Dogwood">#DEC3BE</color>
+    <color name="Timberwolf">#E0D1D1</color>
+    <color name="Platinum">#E1DEE3</color>
+
 
     /// default colors
     <color name="purple_200">#FFBB86FC</color>
