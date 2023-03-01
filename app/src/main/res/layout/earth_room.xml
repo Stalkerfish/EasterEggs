@@ -36,6 +36,7 @@
         </TextView>
 
         <LinearLayout
+            android:id="@+id/periodic_table"
             android:layout_width="349dp"
             android:layout_height="115dp"
             android:layout_gravity="center"
@@ -124,6 +125,7 @@
                 app:cardBackgroundColor="@color/Nyanza">
 
                 <LinearLayout
+                    android:id="@+id/alchemy_section"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/Nyanza"
