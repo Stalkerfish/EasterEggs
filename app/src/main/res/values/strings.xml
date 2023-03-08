@@ -29,6 +29,8 @@
     <string name="wardrobe">WARDROBE</string>
     <string name="increase_orbs">Increase Orbs</string>
     <string name="there_is_no_orbs_here">There is no Orbs here!</string>
+
+    <string name="no_ideas_for_this_button_yet">No ideas for this button yet!</string>
     <string name="landscape">landscape</string>
     <string name="grass">grass</string>
     <string name="tree">tree</string>
