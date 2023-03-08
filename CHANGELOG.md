@@ -1,3 +1,16 @@
+## [3.1.0](https://github.com/Stalkerfish/EasterEggs/compare/v3.0.0...v3.1.0) (2023-02-28)
+
+
+### Features
+
+* add a dialog to Inventory Button ([31340d1](https://github.com/Stalkerfish/EasterEggs/commit/31340d1518da3834514d894965b3fea7cf7736ec))
+* add dialogs for Inventory and TodayElement classes ([9eede37](https://github.com/Stalkerfish/EasterEggs/commit/9eede3735939b8e20ddb248f2d36ad06b9b89973))
+
+
+### Bug Fixes
+
+* block Rooms from grouping in the back stack ([21f3581](https://github.com/Stalkerfish/EasterEggs/commit/21f3581ae2bd026937c02162eb892e87a54b22bf))
+
 ## [3.0.0](https://github.com/Stalkerfish/EasterEggs/compare/v2.2.0...v3.0.0) (2023-02-28)
 
 
@@ -49,11 +62,4 @@
 
 * bug in TextViews not being shown ([2823574](https://github.com/Stalkerfish/EasterEggs/commit/28235744b72fbeb14540f592b2bbe956aea87e53))
 * **Splash:** missing falback theme causing app to crash before start ([35cf1d3](https://github.com/Stalkerfish/EasterEggs/commit/35cf1d3450d0baec8df570898e9e2bb96b578e11))
-
-## [1.3.0](https://github.com/Stalkerfish/EasterEggs/compare/v0.1.0-alpha...v1.3.0) (2023-01-29)
-
-
-### Features
-
-* add a background color to Hell Activity ([98bb19e](https://github.com/Stalkerfish/EasterEggs/commit/98bb19e6b2717a6586dd57b99606cc1df1749afd))
 
