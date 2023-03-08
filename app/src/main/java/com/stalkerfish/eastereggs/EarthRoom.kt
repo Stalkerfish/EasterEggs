@@ -33,18 +33,27 @@ class EarthRoom: AppCompatActivity() {
         }
 
         todaysElementBtn?.setOnClickListener {
-            val todaysDialog = TodayElement()
-            todaysDialog.show(supportFragmentManager, todaysDialog.tag)
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.earth_root, TodayElement.newInstance(), "TodaysElement")
+                .addToBackStack(null)
+                .commit()
         }
 
         periodicTable?.setOnClickListener {
-            val periodicTableDialog = PeriodicTable()
-            periodicTableDialog.show(supportFragmentManager, periodicTableDialog.tag)
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.earth_root, PeriodicTable.newInstance(), "PeriodicTable")
+                .addToBackStack(null)
+                .commit()
         }
 
         alchemySection?.setOnClickListener {
-            val alchemySectionDialog = AlchemySection()
-            alchemySectionDialog.show(supportFragmentManager, alchemySectionDialog.tag)
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.earth_root, AlchemySection.newInstance(), "AlchemySection")
+                .addToBackStack(null)
+                .commit()
         }
     }
 }
