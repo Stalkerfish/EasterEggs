@@ -49,4 +49,5 @@
     <string name="element_hint">It is the eighth most abundant element in the Earth’s crust.</string>
     <string name="hint">Hint</string>
     <string name="accept">Accept</string>
+    <string name="hidden_name">- - - - - - -</string>
 </resources>

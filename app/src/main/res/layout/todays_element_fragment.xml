@@ -44,7 +44,9 @@
             android:fontFamily="@font/googlesansbold"
             android:textColor="@color/white"
             android:textSize="32sp"
-            tools:text="12"/>
+            android:visibility="invisible"
+            tools:visibility="visible"
+            android:text="12"/>
 
         <TextView
             android:id="@+id/atomic_weight"
@@ -56,7 +58,9 @@
             android:fontFamily="@font/googlesansbold"
             android:textColor="@color/white"
             android:textSize="18sp"
-            tools:text="24.305"
+            android:text="24.305"
+            android:visibility="invisible"
+            tools:visibility="visible"
             tools:ignore="RtlSymmetry" />
 
         <TextView
@@ -67,7 +71,9 @@
             android:fontFamily="@font/googlesansbold"
             android:textColor="@color/white"
             android:textSize="64sp"
-            tools:text="Mg" />
+            android:text="Mg"
+            android:visibility="invisible"
+            tools:visibility="visible" />
 
         <TextView
             android:id="@+id/element_name"
@@ -78,7 +84,7 @@
             android:fontFamily="@font/googlesansbold"
             android:textColor="@color/white"
             android:textSize="18sp"
-            tools:text="- - - - - - -"/>
+            android:text="@string/hidden_name"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -109,7 +115,7 @@
         android:fontFamily="@font/googlesansbold"
         android:textSize="30sp"
         android:textColor="@color/Drab_Dark_Brown"
-        tools:text="@string/element_hint"/>
+        android:text="@string/element_hint"/>
 
     <LinearLayout
         android:id="@+id/hint_button"
