@@ -2,6 +2,7 @@
 
 package com.stalkerfish.eastereggs
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -33,7 +34,9 @@ class TodayElement: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val title: TextView? = view.findViewById(R.id.title)
+        val listOfElements = TableOfElements.getElement()
+        val randomElementIndex = kotlin.random.Random.nextInt(0,listOfElements.size)
+
         val atomicNumber: TextView? = view.findViewById(R.id.atomic_number)
         val atomicWeight: TextView? = view.findViewById(R.id.atomic_weight)
         val elementSymbol: TextView? = view.findViewById(R.id.element_symbol)
@@ -41,9 +44,13 @@ class TodayElement: Fragment() {
         val answer: EditText? = view.findViewById(R.id.answer)
         val acceptButton: Button? = view.findViewById(R.id.accept_button)
 
-        var timesClicked = 0
+        val todayElement = listOfElements[randomElementIndex]
 
-        title?.isVisible = true
+        atomicNumber?.text = todayElement.atomicNumber.toString()
+        atomicWeight?.text = todayElement.atomicWeight.toString()
+        elementSymbol?.text = todayElement.symbol
+
+        var timesClicked = 0
 
         hintButton?.setOnClickListener {
             timesClicked++
@@ -59,7 +66,8 @@ class TodayElement: Fragment() {
 
             if (answer?.text?.isEmpty() == true) {
                 MotionToast.darkColorToast(
-                    requireActivity(), "Missing Answer", "Input the element name in the TextBox!",
+                    requireActivity() as Activity, "Missing Answer",
+                    "Input the element name in the TextBox!",
                     MotionToastStyle.ERROR,
                     MotionToast.GRAVITY_BOTTOM,
                     MotionToast.SHORT_DURATION,
@@ -68,10 +76,32 @@ class TodayElement: Fragment() {
                         www.sanju.motiontoast.R.font.helvetica_regular
                     )
                 )
-            } else {
-                TODO()
+            }
+            else if (answer?.text contentEquals(todayElement.name)) {
+                MotionToast.darkColorToast(
+                    requireContext() as Activity, "Wow, you found out the element",
+                    "You earned a Hell Orb, it is used to travel to The Hell.",
+                    MotionToastStyle.SUCCESS,
+                    MotionToast.GRAVITY_BOTTOM,
+                    MotionToast.LONG_DURATION,
+                    ResourcesCompat.getFont(
+                        requireContext(),
+                        www.sanju.motiontoast.R.font.helvetica_regular
+                    )
+                )
+
+                val hellOrb = HellActivity::class.java
+
+                val orbAdded = Orb(hellOrb, "Hell Orb")
+                OrbShelf.addOrb(orbAdded)
+                Inventory.addItem(orbAdded)
+                close()
             }
         }
     }
-}
 
+    private fun close() {
+        val manager = requireActivity().supportFragmentManager
+        manager.beginTransaction().remove(this).commit()
+    }
+}

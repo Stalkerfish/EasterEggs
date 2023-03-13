@@ -20,9 +20,7 @@
         android:fontFamily="@font/googlesansbold"
         android:textSize="28sp"
         android:textColor="@color/Drab_Dark_Brown"
-        android:text="@string/what_is_the_element"
-        android:visibility="invisible"
-        tools:visibility="visible">
+        android:text="@string/what_is_the_element">
 
     </TextView>
     
@@ -96,7 +94,7 @@
         app:hintTextColor="@color/Jade"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <androidx.appcompat.widget.AppCompatEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
