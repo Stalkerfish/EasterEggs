@@ -3,6 +3,7 @@
 package com.stalkerfish.eastereggs
 
 import android.app.Activity
+import kotlin.random.Random
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -35,7 +36,7 @@ class TodayElement: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val listOfElements = TableOfElements.getElement()
-        val randomElementIndex = kotlin.random.Random.nextInt(0,listOfElements.size)
+        val randomElementIndex = Random.nextInt(1,listOfElements.size+1)
 
         val atomicNumber: TextView? = view.findViewById(R.id.atomic_number)
         val atomicWeight: TextView? = view.findViewById(R.id.atomic_weight)
@@ -43,12 +44,14 @@ class TodayElement: Fragment() {
         val hintButton: LinearLayout? = view.findViewById(R.id.hint_button)
         val answer: EditText? = view.findViewById(R.id.answer)
         val acceptButton: Button? = view.findViewById(R.id.accept_button)
+        val textHint: TextView? = view.findViewById(R.id.hint)
 
         val todayElement = listOfElements[randomElementIndex]
 
         atomicNumber?.text = todayElement.atomicNumber.toString()
         atomicWeight?.text = todayElement.atomicWeight.toString()
         elementSymbol?.text = todayElement.symbol
+        textHint?.text = todayElement.description
 
         var timesClicked = 0
 
