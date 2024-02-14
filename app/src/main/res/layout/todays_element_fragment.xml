@@ -1,44 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="50dp"
+    android:paddingBottom="50dp"
+    android:clickable="true"
+    android:focusable="true"
     android:background="@color/Nyanza">
 
     <TextView
-        android:id="@+id/not_implemented_sign"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:fontFamily="@font/googlesansbold"
+        android:textSize="28sp"
+        android:textColor="@color/Drab_Dark_Brown"
+        android:text="@string/what_is_the_element">
+
+    </TextView>
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/element"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="172dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/Cordovan">
+
+        <TextView
+            android:id="@+id/atomic_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:padding="8dp"
+            android:fontFamily="@font/googlesansbold"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            android:text="12"/>
+
+        <TextView
+            android:id="@+id/atomic_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:paddingTop="10dp"
+            android:paddingEnd="16dp"
+            android:fontFamily="@font/googlesansbold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="24.305"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/element_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/googlesansbold"
+            android:textColor="@color/white"
+            android:textSize="64sp"
+            android:text="Mg"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/element_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/googlesansbold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="@string/hidden_name"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="442dp"
+        android:layout_gravity="center_horizontal"
+        app:hintTextColor="@color/Jade"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/what_is_the_element"
+            android:importantForAutofill="no" />
+    </com.google.android.material.textfield.TextInputLayout>
+    
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="525dp"
+        android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:fontFamily="@font/googlesansbold"
         android:textSize="20sp"
         android:textColor="@color/Drab_Dark_Brown"
-        android:text="@string/not_implemented_yet"
-        android:visibility="invisible"
-        tools:visibility="visible">
+        tools:text="@string/element_hint"/>
 
-    </TextView>
+    <LinearLayout
+        android:id="@+id/hint_button"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="7dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/hint_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/retrieve_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginTop="180dp"
-        android:background="@drawable/inventory_radius"
-        android:backgroundTint="@color/Dark_Moss_Green"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/googlesansbold"
+            android:text="@string/hint"
+            android:textColor="#636940"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/accept_button"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/accept_bg"
         android:fontFamily="@font/googlesansbold"
         android:gravity="center"
-        android:padding="18dp"
-        android:text="@string/retrieve_an_item"
-        android:textColor="@color/Honeydew"
-        android:textSize="16sp">
+        android:text="@string/accept"
+        android:textColor="@color/Platinum"
+        android:textSize="20sp">
 
-    </Button>
+    </androidx.appcompat.widget.AppCompatButton>
 
 
 </FrameLayout>

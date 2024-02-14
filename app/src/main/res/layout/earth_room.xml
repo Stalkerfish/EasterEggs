@@ -3,12 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/earth_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/Theme.Earth"
-    android:id="@+id/earth_root"
-    android:background="@color/Jade">
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/Jade"
+    style="@style/Theme.Earth">
 
     <LinearLayout
         android:layout_width="match_parent"

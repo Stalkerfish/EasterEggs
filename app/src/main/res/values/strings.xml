@@ -40,10 +40,14 @@
     <string name="earth_room">EARTH ROOM</string>
     <string name="the_periodic_table_of_elements">The \nPeriodic \nTable of Elements </string>
     <string name="hydrogen">Hydrogen</string>
-    <string name="what_is_the_element">What\'s the element?</string>
+    <string name="what_is_the_element">What is the element?</string>
     <string name="play_with_the_elements">Play with the\n elements!</string>
     <string name="empty_sign">Your inventory is empty!\n\nhint: Try finding out\nThe Element of the Day!</string>
     <string name="not_implemented_yet">Not implemented yet!</string>
     <string name="retrieve_an_item">Retrieve an item</string>
     <string name="empty_bag_sign">Your backpack is empty!</string>
+    <string name="element_hint">It is the eighth most abundant element in the Earth’s crust.</string>
+    <string name="hint">Hint</string>
+    <string name="accept">Accept</string>
+    <string name="hidden_name">- - - - - - -</string>
 </resources>

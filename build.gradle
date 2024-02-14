@@ -1,4 +1,7 @@
 buildscript {
+    ext {
+        kotlin_version = '1.8.20-RC'
+    }
     repositories {
         google()
         mavenCentral() // or gradlePluginPortal()
@@ -6,6 +9,7 @@ buildscript {
 
     dependencies {
         classpath("com.dipien:semantic-version-android-gradle-plugin:1.4.1")
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
