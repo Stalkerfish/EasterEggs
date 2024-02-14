@@ -27,7 +27,7 @@ jobs:
     if: ${{ !contains(needs.generate-changelog.outputs.changelog, '[skip-release]') }}
     steps:
       - name: Create Release
-        uses: softprops/action-gh-release@vv0.1.15
+        uses: softprops/action-gh-release@v0.1.15
         with:
           files: ""
           tag_name: ${{ needs.generate-changelog.outputs.tag }}
