@@ -26,14 +26,12 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ !contains(needs.generate-changelog.outputs.changelog, '[skip-release]') }}
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4.1.1
-
       - name: Create Release
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@vv0.1.15
+        with:
+          files: ""
+          tag_name: ${{ needs.generate-changelog.outputs.tag }}
+          name: ${{ needs.generate-changelog.outputs.tag }}
+          body: ${{ needs.generate-changelog.outputs.clean_changelog }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ steps.generate-changelog.outputs.tag }}
-          release_name: ${{ steps.generate-changelog.outputs.tag }}
-          body: ${{ steps.generate-changelog.outputs.clean_changelog }}
