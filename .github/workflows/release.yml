@@ -1,51 +1,39 @@
 name: Releases
+
 on:
   push:
     branches:
       - main
-      
   workflow_dispatch:
 
 jobs:
-
-  skip-workflow:
+  generate-changelog:
     runs-on: ubuntu-latest
-    
-    outputs: # job outputs
-      skip: ${{ steps.skip-workflow.outputs.skip }}
-    
+    outputs:
+      changelog: ${{ steps.generate-changelog.outputs.changelog }}
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4.1.1
 
-      - name: skip-workflow
-        id: skip-workflow # id used for referencing step
-        uses: saulmaldonado/skip-workflow@v1
-        with:
-          phrase: '[skip-release]'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          
-          
-  changelog:
-  
-    needs: skip-workflow
-    
-    if: ${{ !needs.skip-workflow.outputs.skip }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: conventional Changelog Action
-        id: changelog
-        uses: TriPSs/conventional-changelog-action@v3
+      - name: Generate Changelog
+        id: generate-changelog
+        uses: TriPSs/conventional-changelog-action@v5.2.0
         with:
           preset: conventionalcommits
-          
-      - name: create release
+
+  create-release:
+    needs: generate-changelog
+    runs-on: ubuntu-latest
+    if: ${{ !contains(needs.generate-changelog.outputs.changelog, '[skip-release]') }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.1
+
+      - name: Create Release
         uses: actions/create-release@v1
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.changelog.outputs.tag }}
-          release_name: ${{ steps.changelog.outputs.tag }}
-          body: ${{ steps.changelog.outputs.clean_changelog }}
+          tag_name: ${{ steps.generate-changelog.outputs.tag }}
+          release_name: ${{ steps.generate-changelog.outputs.tag }}
+          body: ${{ steps.generate-changelog.outputs.clean_changelog }}
