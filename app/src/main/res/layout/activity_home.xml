@@ -1,135 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
     android:background="@color/Rose_Red"
     tools:context=".HomeActivity">
 
     <FrameLayout
-        android:layout_width="match_parent"
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
         android:layout_height="282dp"
-        android:orientation="vertical"
-        android:background="@drawable/frame_transformed">
-    </FrameLayout>
+        android:background="@drawable/frame_transformed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/home_room"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal">
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/googlesansbold"
+        android:textSize="36sp"
+        android:textColor="@color/Timberwolf"
+        android:text="@string/home_room"
+        app:layout_constraintTop_toBottomOf="@id/frame_layout"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/home_room"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginStart="10dp"
-            android:fontFamily="@font/googlesansbold"
-            android:textSize="36sp"
-            android:textColor="@color/Timberwolf"
-            android:text="@string/home_room">
-
-        </TextView>
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="4dp"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="26dp"
-            android:background="@drawable/just_a_line">
-        </FrameLayout>
-
-    </LinearLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/just_a_line"
+        app:layout_constraintTop_toBottomOf="@id/frame_layout"
+        app:layout_constraintStart_toEndOf="@id/home_room" />
 
     <LinearLayout
         android:id="@+id/first_row"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/home_room"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5">
 
         <FrameLayout
             android:id="@+id/wardrobe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:background="@drawable/wardrobe">
-
-        </FrameLayout>
+            android:background="@drawable/wardrobe" />
 
         <FrameLayout
             android:id="@+id/bag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="75dp"
-            android:background="@drawable/backpack">
-
-        </FrameLayout>
-
+            android:background="@drawable/backpack" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/mid_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rectangle"
         android:gravity="center"
-        android:background="@drawable/rectangle">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_row">
 
         <TextView
             android:id="@+id/mid_button_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:fontFamily="@font/googlesansbold"
-            android:textSize="16sp"
+            android:gravity="center"
+            android:text="@string/no_ideas_for_this_button_yet"
             android:textColor="@color/Platinum"
-            android:text="@string/no_ideas_for_this_button_yet">
-
-        </TextView>
-
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/last_row"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mid_button">
 
         <FrameLayout
             android:id="@+id/journal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:background="@drawable/book">
-
-        </FrameLayout>
+            android:background="@drawable/book" />
 
         <FrameLayout
             android:id="@+id/phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="38.31dp"
-            android:background="@drawable/phone">
-
-        </FrameLayout>
+            android:background="@drawable/phone" />
 
         <FrameLayout
             android:id="@+id/settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="38.31dp"
-            android:background="@drawable/settings">
-
-        </FrameLayout>
+            android:background="@drawable/settings" />
     </LinearLayout>
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -42,23 +42,23 @@ class HomeActivity : AppCompatActivity() {
             dialog.show(supportFragmentManager, dialog.tag)     // Display the dialog
         }
 
-        backpack?.setOnClickListener {
-            val dialog = BackpackDialog()
-            dialog.show(supportFragmentManager, dialog.tag)
-        }
+//        backpack?.setOnClickListener {
+//            val dialog = BackpackDialog()
+//            dialog.show(supportFragmentManager, dialog.tag)
+//        }
 
-        journal?.setOnClickListener {
-            val dialog = JournalDialog()
-            dialog.show(supportFragmentManager, dialog.tag)
-        }
+//        journal?.setOnClickListener {
+//            val dialog = JournalDialog()
+//            dialog.show(supportFragmentManager, dialog.tag)
+//        }
 
-        phone?.setOnClickListener {
-            supportFragmentManager
-                .beginTransaction()
-                .add(R.id.home_root, PhoneFragment.newInstance(), "Phone")
-                .addToBackStack(null)
-                .commit()
-        }
+//        phone?.setOnClickListener {
+//            supportFragmentManager
+//                .beginTransaction()
+//                .add(R.id.home_root, PhoneFragment.newInstance(), "Phone")
+//                .addToBackStack(null)
+//                .commit()
+//        }
 
         midBtn?.setOnClickListener { orbButtonCallback() }
     }
